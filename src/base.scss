@@ -1,0 +1,124 @@
+// COLOR VARIABLES
+$color-primary: #c69963;
+$color-primary-dark: #B28451;
+
+$color-secondary: #101d2c;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+
+// FONT VARIABLES
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+//screen size
+$largest: 87.5em; //1400px
+$large: 75em; //1200
+$medium: 62.5em; //1000
+$small: 37.5em;//600
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html{
+  box-sizing: border-box;
+  font-size: 62.5%; //10px
+  @media only screen and (max-width: $largest) {
+    font-size: 56.25%; //9px
+  }
+  @media only screen and (max-width: $large) {
+    font-size: 50%; //8px
+  }
+  @media only screen and (max-width: $large) {
+    font-size: 43.75%; //7px
+  }
+}
+
+body{
+  font-family: $font-primary;
+  color: $color-grey-dark-2;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+
+
+//headings
+%heading{
+  font-family: $font-display;
+  font-weight: 400;
+}
+.heading-1{
+  @extend %heading;
+  color: $color-grey-light-1;
+  font-size: 4.5rem;
+  line-height: 1;
+}
+.heading-2{
+  @extend %heading;
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1;
+  &__light{
+    color: $color-grey-light-1;
+  }
+
+  &__dark{
+    color: $color-grey-dark-1;
+  }
+}
+.heading-3{
+  @extend %heading;
+  font-size: 1.6rem;
+  color: $color-primary;
+  text-transform: uppercase;
+}
+.heading-4{
+  @extend %heading;
+  font-size: 1.9rem;
+  &__light{
+    color: $color-grey-light-1;
+  }
+
+  &__dark{
+    color: $color-grey-dark-1;
+  }
+}
+
+//buttons
+.btn{
+  background-color: $color-primary;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-family: $font-display;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  cursor: pointer;
+  transition: all .2s;
+
+  &:hover{
+    background-color: $color-primary-dark;
+  }
+}
+
+.mb-sm{
+  margin-bottom: 2rem;
+}
+.mb-md{
+  margin-bottom: 3rem;
+}
+.mb-lg{
+  margin-bottom: 4rem;
+}
+.mb-hg{
+  margin-bottom: 8rem;
+}
