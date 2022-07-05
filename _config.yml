@@ -1,2 +1,5 @@
 theme: jekyll-theme-minimal
 title: Nexter
+domain: nexter.github.io
+url: https://nexter.github.io
+baseurl: /Nexter/   
