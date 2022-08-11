@@ -1,0 +1,51 @@
+@import "../../base";
+
+.realtors{
+  background-color: $color-secondary;
+  grid-column: col-start 7/full-end;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__heading{
+    margin-bottom: 2rem;
+  }
+  @media only screen and (max-width: $medium) {
+    grid-column: full-start/full-end;
+    &__list{
+      display: grid;
+      grid-template-columns: repeat(3, min-content);
+      grid-gap: 2rem;
+    }
+    &__heading{
+      margin: 2rem 0;
+    }
+  }
+
+  @media only screen and (max-width: $small) {
+    &__list {
+      grid-template-columns: max-content;
+    }
+  }
+}
+
+.realtor{
+  display: grid;
+  grid-template-columns: min-content max-content;
+  grid-column-gap: 2rem;
+  align-items: center;
+
+  margin-bottom: 5vh;
+  &__img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 100%;
+  }
+  &__houses{
+    text-transform: uppercase;
+    color: $color-grey-light-2;
+  }
+
+}
